@@ -1,0 +1,33 @@
+body {
+  background-color: #03222e;
+  color: #e0e0e0;
+}
+.answers{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2,150px);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.answers li{
+  cursor: pointer;
+  border: solid #000 1px;
+  margin-bottom: 5px;
+  padding: 15px;
+  text-align: center;
+  background-color: #d8d8d8;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.answers li:hover{
+  background-color: #7ab38d;
+  color: #fff;
+  border: solid #d8d8d8 1px;
+}
+.answers .alert:hover,
+.answers .alert{
+  background-color: red;
+  color: #fff;
+  border: red solid 1px;
+}
