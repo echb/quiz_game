@@ -5,20 +5,30 @@ const restartGame = document.querySelector('.restartGame')
 
 const datas = [
   {
-    question: ['color de fruta roja'],
-    answers: ['manzana', 'platano', 'pera', 'limon'],
-    trueAnswer: 'manzana'
+    question: ['red fruit'],
+    answers: ['apple', 'banana', 'pear', 'lemon'],
+    trueAnswer: 'apple'
   },
   {
-    question: ['ruedas coche'],
+    question: ['wheels number'],
     answers: [1, 2, 3, 4],
     trueAnswer: 4
   },
   {
-    question: ['cuantos ojos'],
+    question: ['eyes number'],
     answers: [1, 2, 3, 4],
     trueAnswer: 2
   },
+  {
+    question: ['speed of sound (m/s)'],
+    answers: [343, 945, 453, 628, 424, 387],
+    trueAnswer: 343
+  },
+  {
+    question: ['color of water'],
+    answers: ['white', 'green', 'blue', 'none in this list'],
+    trueAnswer: 'none in this list'
+  }
 ]
 let counter = 0
 let scoreGame = 0
@@ -58,6 +68,7 @@ function verifyAnswer(e) {
     return true
   }
 
+  scoreGame -= 10
   e.target.classList.add('alert')
   setTimeout(() => {
     e.target.classList.remove('alert')
